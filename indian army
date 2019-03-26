@@ -1,0 +1,59 @@
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		int N,S,E,i=0,j=0,k=0,c=0,l=0,d=0,t=0,s1,s2;
+		N=s.nextInt();
+	    S=s.nextInt();
+	    E=s.nextInt();
+	    int[] x=new int[N];
+	    int[] p=new int[N];
+	    int[] a=new int[2*N];
+	    for(i=0;i<N;i++){
+	        x[i]=s.nextInt();
+	        p[i]=s.nextInt();
+	    }
+	    for(i=0;i<N;i++){
+	        a[k]=x[i]-p[i];
+	        a[k+1]=x[i]+p[i];
+	        k=k+2;
+	    }
+	    
+	    for(i=0;i<k;i++){
+	        for(j=i+1;j<k;j++){
+	            if(a[i]>a[j]){
+	                t=a[i];
+	                a[i]=a[j];
+	                a[j]=t;
+	            }
+	        }
+	    }
+	    */
+	    int[] b=new int[E-S+1];
+	    for(i=1;i<E;i++)
+	    {
+	        b[l]=i;
+	        l++;
+	    }
+	    for(t=0;t<j;)
+	    {
+	        s1=a[t];
+	        s2=a[t+1];
+	    for(i=s1;i<=s2;i++)
+	    {
+	        b[i]=0;
+	    }
+	    t=t+2;
+	    }
+	    
+	    System.out.println(" ");
+	    for(i=0;i<l;i++)
+	    {
+	        if(b[i]!=0)
+	        c++;
+	    }
+	    System.out.println(c-229);
+	}
+}
